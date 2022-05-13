@@ -13,6 +13,8 @@
     align-items: center;
     justify-content: space-between;
 
+    
+
     .search {
       display: flex;
       align-items: center;
@@ -29,11 +31,17 @@
         }
       }
     }
+    .login {
+      justify-content: end;
+      width: 100%;
+    }
 
     .items {
       display: flex;
       align-items: center;
       cursor: pointer;
+
+      
 
       .item {
         display: flex;

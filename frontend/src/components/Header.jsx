@@ -17,7 +17,6 @@ function Header() {
 
   const onUploadClick = () => {
     navigate("/upload");
-
   }
 
   return (

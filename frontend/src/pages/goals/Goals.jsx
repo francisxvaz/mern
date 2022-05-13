@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import GoalForm from '../components/GoalForm'
-import GoalItem from '../components/GoalItem'
-import Spinner from '../components/Spinner'
-import { getGoals, reset } from '../features/goals/goalSlice'
+import GoalForm from '../../components/GoalForm'
+import GoalItem from '../../components/GoalItem'
+import Spinner from '../../components/Spinner'
+import { getGoals, reset } from '../../features/goals/goalSlice'
 
-function Dashboard() {
+function Goals() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
@@ -37,11 +37,6 @@ function Dashboard() {
 
   return (
     <>
-      <section className='heading'>
-        <h1>Welcome {user && user.name}</h1>
-        <p>Goals Dashboard</p>
-      </section>
-
       <GoalForm />
 
       <section className='content'>
@@ -59,4 +54,4 @@ function Dashboard() {
   )
 }
 
-export default Dashboard
+export default Goals

@@ -5,13 +5,17 @@ import Widget from "../../components/widget/Widget";
 import Featured from "../../components/featured/Featured";
 import Chart from "../../components/chart/Chart";
 import Table from "../../components/table/Table";
+import Goals from "../goals/Goals";
+import { useSelector } from "react-redux";
 
 const Home = () => {
+
+  const {user} = useSelector((state) => state.auth)
+
   return (
-    <div className="home">
-      <Sidebar />
+    
       <div className="homeContainer">
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="widgets">
           <Widget type="user" />
           <Widget type="order" />
@@ -26,8 +30,11 @@ const Home = () => {
           <div className="listTitle">Latest Transactions</div>
           <Table />
         </div>
+        <div className="listContainer">
+          <div className="listTitle"><b>{user && user.name}</b> your Goals</div>
+          <Goals />
+        </div>
       </div>
-    </div>
   );
 };
 
